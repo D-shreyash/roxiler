@@ -14,11 +14,11 @@ This is a full-stack web application with a React frontend and a Node.js backend
    cd <repository-backend-directory>
    
 Install Dependencies Install the necessary backend dependencies:
- ```bash
+```bash
 npm install
 
 Configure Environment Variables Create a .env file in the back_end directory and add the following:
- ```bash
+```bash
 MONGO_URI=<your-mongo-db-uri>
 
 Start the Server Start the backend server:
