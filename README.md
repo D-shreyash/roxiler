@@ -1,60 +1,51 @@
-# roxiler
+# Roxiler Assignment
 
-# Project Name
-roxiler assignment
+## Project Overview
+This is a full-stack web application with a React frontend and a Node.js backend. The frontend communicates with the backend using RESTful API requests.
 
-### Steps to Run the Project
+## Steps to Run the Project
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/repository-name.git
-   cd repository-name
-Install dependencies for both client (React) and server (Node.js):
+### 1. Clone the Repository
+Clone the repository to your local machine:
 
-For the client (React):
+```bash
+git clone https://github.com/yourusername/repository-name.git
+cd repository-name
+2. Install Dependencies
+For the Client (React)
+Navigate to the front_end directory and install the required dependencies:
 
 bash
 Copy code
 cd front_end
 npm install
-For the server (Node.js):
+For the Server (Node.js)
+Navigate to the back_end directory and install the required dependencies:
 
 bash
 Copy code
 cd ../back_end
 npm install
-Run the development servers:
-
-To run the React development server:
+3. Run the Development Servers
+React Development Server
+To run the React development server, navigate to the front_end directory and start the server:
 
 bash
 Copy code
 cd front_end
 npm start
-To run the Node.js backend server:
+The frontend will be running at http://localhost:3000.
+
+Node.js Backend Server
+To run the Node.js backend server, navigate to the back_end directory and start the server:
 
 bash
 Copy code
 cd back_end
 npm start
-The React app should now be running at http://localhost:3000, and the backend at http://localhost:5000.
+The backend will be running at http://localhost:5000.
 
-Usage
-Frontend: The frontend is built using React.js and communicates with the Node.js backend using API requests.
-Backend: The backend is built using Node.js and Express, and exposes RESTful APIs to interact with the frontend.
-Ensure both servers are running for full functionality.
-
-Technologies Used
-Frontend:
-
-React.js
-Axios (for API requests)
-React Router (for navigation)
-CSS/SCSS (for styling)
-Backend:
-
-Node.js
-Express.js
-MongoDB (or any other database)
-dotenv (for environment variables)
-CORS (for cross-origin requests)
+4. Usage
+Frontend: Built using React.js, Axios (for API requests), React Router (for navigation), and styled with CSS/SCSS.
+Backend: Built using Node.js and Express, and exposes RESTful APIs to interact with the frontend.
+Ensure both servers (frontend and backend) are running for full functionality.
