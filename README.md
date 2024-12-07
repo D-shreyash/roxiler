@@ -1,7 +1,8 @@
 # Roxiler Assignment
 
-## Project Overview
-This is a full-stack web application with a React frontend and a Node.js backend. The frontend communicates with the backend using RESTful API requests. The backend is responsible for initializing the database and handling API calls, while the frontend provides the user interface.
+## Live Link
+The live version of the application is hosted on a free service, so it may take 20 to 30 seconds to reload after updates. You can access the live link here:
+https://roxiler-1-ves6.onrender.com
 
 ## Steps to Run the Project
 
