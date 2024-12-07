@@ -25,8 +25,18 @@ This is a full-stack web application with a React frontend and a Node.js backend
     ```bash
    npm start
 
-3. **The backend will run on http://localhost:5000.**
+###Frontend
 
-3. **Initialize the Database To initialize the database with the provided seed URL, send a GET request:**
-   GET http://localhost:5000/api/initialize
-   This will set up the necessary data in the database.
+1. **Navigate to the frontend directory:**
+   ```bash
+   cd <repository-frontend-directory>
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   
+3. **Start the frontend:**
+   ```bash
+   npm run dev
+   
+4. The frontend will run on http://localhost:3001 or another available port.
