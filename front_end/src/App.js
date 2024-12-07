@@ -19,39 +19,38 @@ function App() {
   const [pieChart, setPieChart] = useState([]);
   const [Loading, setLoading] = useState(false);
 
-  const getData = async () => {
-    try {
-      const { data: statisticsResponse } = await axios.get(
-        `http://localhost:3001/transactions/getStistics?month=${month}`
-      );
-      setStatesticsData(statisticsResponse);
-
-      const { data: transactionsResponse } = await axios.get(
-        `http://localhost:3001/transactions/listTransation?month=${month}&search=${search}&page=${page}&perPage=${perPage}`
-      );
-
-      setTransactions(transactionsResponse.transactions);
-      setTotalCount(transactionsResponse.totalCount);
-
-      const { data: barChartResponse } = await axios.get(
-        `http://localhost:3001/transactions/getBarChart?month=${month}`
-      );
-      setBarChart(barChartResponse);
-
-      const { data: pieChartResponse } = await axios.get(
-        `http://localhost:3001/transactions/getPieChart?month=${month}`
-      );
-      setPieChart(pieChartResponse);
-
-      console.log("home", statisticsResponse);
-    } catch (error) {
-      console.log("error", error);
-    } finally {
-      setLoading(true);
-    }
-  };
-
   useEffect(() => {
+    const getData = async () => {
+      try {
+        const { data: statisticsResponse } = await axios.get(
+          `http://localhost:3001/transactions/getStistics?month=${month}`
+        );
+        setStatesticsData(statisticsResponse);
+
+        const { data: transactionsResponse } = await axios.get(
+          `http://localhost:3001/transactions/listTransation?month=${month}&search=${search}&page=${page}&perPage=${perPage}`
+        );
+
+        setTransactions(transactionsResponse.transactions);
+        setTotalCount(transactionsResponse.totalCount);
+
+        const { data: barChartResponse } = await axios.get(
+          `http://localhost:3001/transactions/getBarChart?month=${month}`
+        );
+        setBarChart(barChartResponse);
+
+        const { data: pieChartResponse } = await axios.get(
+          `http://localhost:3001/transactions/getPieChart?month=${month}`
+        );
+        setPieChart(pieChartResponse);
+
+        console.log("home", statisticsResponse);
+      } catch (error) {
+        console.log("error", error);
+      } finally {
+        setLoading(true);
+      }
+    };
     getData();
   }, [month, search, page, perPage]);
 
