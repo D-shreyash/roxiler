@@ -28,19 +28,20 @@ function App() {
         setStatesticsData(statisticsResponse);
 
         const { data: transactionsResponse } = await axios.get(
-          `https://roxiler-fc1t.onrender.com/listTransation?month=${month}&search=${search}&page=${page}&perPage=${perPage}`
+          `https://roxiler-fc1t.onrender.com/transactions/listTransation?month=${month}&search=${search}&page=${page}&perPage=${perPage}`
         );
 
         setTransactions(transactionsResponse.transactions);
         // setTotalCount(transactionsResponse.totalCount);
+        console.log(transactionsResponse.transactions);
 
         const { data: barChartResponse } = await axios.get(
-          `https://roxiler-fc1t.onrender.com/getBarChart?month=${month}`
+          `https://roxiler-fc1t.onrender.com/transactions/getBarChart?month=${month}`
         );
         setBarChart(barChartResponse);
 
         const { data: pieChartResponse } = await axios.get(
-          `https://roxiler-fc1t.onrender.com/getPieChart?month=${month}`
+          `https://roxiler-fc1t.onrender.com/transactions/getPieChart?month=${month}`
         );
         setPieChart(pieChartResponse);
 
