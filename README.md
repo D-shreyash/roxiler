@@ -25,7 +25,7 @@ This is a full-stack web application with a React frontend and a Node.js backend
     ```bash
    npm start
 
-###Frontend
+### Frontend
 
 1. **Navigate to the frontend directory:**
    ```bash
