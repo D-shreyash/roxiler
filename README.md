@@ -14,20 +14,19 @@ This is a full-stack web application with a React frontend and a Node.js backend
    cd <repository-backend-directory>
    
 2. **Install Dependencies Install the necessary backend dependencies:**
-```bash
-npm install
+   ```bash
+   npm install
 
 3. **Configure Environment Variables Create a .env file in the back_end directory and add the following:**
-```bash
-MONGO_URI=<your-mongo-db-uri>
+   ```bash
+   MONGO_URI=<your-mongo-db-uri>
 
 3. **Start the Server Start the backend server:**
- ```bash
-npm start
+    ```bash
+   npm start
 
 3. **The backend will run on http://localhost:5000.**
 
 3. **Initialize the Database To initialize the database with the provided seed URL, send a GET request:**
- ```bash
-GET http://localhost:5000/api/initialize
-This will set up the necessary data in the database.
+   GET http://localhost:5000/api/initialize
+   This will set up the necessary data in the database.
