@@ -23,24 +23,24 @@ function App() {
     const getData = async () => {
       try {
         const { data: statisticsResponse } = await axios.get(
-          `http://localhost:3001/transactions/getStistics?month=${month}`
+          `https://roxiler-fc1t.onrender.com/transactions/getStistics?month=${month}`
         );
         setStatesticsData(statisticsResponse);
 
         const { data: transactionsResponse } = await axios.get(
-          `http://localhost:3001/transactions/listTransation?month=${month}&search=${search}&page=${page}&perPage=${perPage}`
+          `https://roxiler-fc1t.onrender.com/listTransation?month=${month}&search=${search}&page=${page}&perPage=${perPage}`
         );
 
         setTransactions(transactionsResponse.transactions);
         setTotalCount(transactionsResponse.totalCount);
 
         const { data: barChartResponse } = await axios.get(
-          `http://localhost:3001/transactions/getBarChart?month=${month}`
+          `https://roxiler-fc1t.onrender.com/getBarChart?month=${month}`
         );
         setBarChart(barChartResponse);
 
         const { data: pieChartResponse } = await axios.get(
-          `http://localhost:3001/transactions/getPieChart?month=${month}`
+          `https://roxiler-fc1t.onrender.com/getPieChart?month=${month}`
         );
         setPieChart(pieChartResponse);
 
