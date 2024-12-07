@@ -12,7 +12,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [month, setMonth] = useState("10");
   const [page, setPage] = useState(1);
-  const [totalCount, setTotalCount] = useState(0);
+  // const [totalCount, setTotalCount] = useState(0);
   const [perPage, setPerPage] = useState(10);
   const [transactions, setTransactions] = useState([]);
   const [barChart, setBarChart] = useState([]);
@@ -32,7 +32,7 @@ function App() {
         );
 
         setTransactions(transactionsResponse.transactions);
-        setTotalCount(transactionsResponse.totalCount);
+        // setTotalCount(transactionsResponse.totalCount);
 
         const { data: barChartResponse } = await axios.get(
           `https://roxiler-fc1t.onrender.com/getBarChart?month=${month}`
@@ -51,6 +51,9 @@ function App() {
         setLoading(true);
       }
     };
+    setPage(1);
+    // setTotalCount(100);
+    setPerPage(10);
     getData();
   }, [month, search, page, perPage]);
 
